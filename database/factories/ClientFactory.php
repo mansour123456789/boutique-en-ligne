@@ -10,8 +10,7 @@ $factory->define(clients::class, function (Faker $faker) {
         'name' => $faker->lastName,
         'prenom' => $faker->firstName,
         'email' => $faker->freeEmail,
-        'password' => $faker->sentence,
-        'tel' => $faker->e164PhoneNumber,
-        'created_at' => now()
+        'password' => $faker->lastName,
+        'tel' => $faker->lastName        
     ];
 });
