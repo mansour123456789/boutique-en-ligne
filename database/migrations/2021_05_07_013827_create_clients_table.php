@@ -15,11 +15,11 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('name',50);
-            $table->String('prenom',50);
-            $table->String('email')->unique();
-            $table->String('password',50);
-            $table->String('tel',8);
+            $table->string('name',50);
+            $table->string('prenom',50);
+            $table->string('email');
+            $table->string('password',50);
+            $table->string('tel',8);
             $table->enum('Role_user',['0','1']);
         
          $table->timestamps();

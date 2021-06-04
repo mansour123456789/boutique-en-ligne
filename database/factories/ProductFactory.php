@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+
 use App\Product;
 use Faker\Generator as Faker;
 
@@ -15,6 +16,5 @@ $factory->define(Product::class, function (Faker $faker) {
         'prix' =>$faker->randomFloat(3,0,999999),
         'choix' =>$faker->randomElement(['vetment','chemise','pontalon']),
 
-        'created_at' => now()
     ];
 });
