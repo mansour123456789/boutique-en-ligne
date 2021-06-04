@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class commande extends Model
 {
     public $timestamps=false;
- public function clients()
+ public function client()
    {
-        return $this->belongsTo('APP\clients');
+        return $this->belongsTo('APP\client');
     }
-    public function products()
+    public function product()
     {
-        return $this->belongsToMany('APP\products');
+        return $this->belongsToMany('APP\product');
     }
 }
