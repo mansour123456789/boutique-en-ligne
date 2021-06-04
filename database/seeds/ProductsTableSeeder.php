@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\products;
+use App\Product;
 class ProductsTableSeeder extends Seeder
 {
     /**
@@ -12,6 +12,7 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(App\products::class, 10)->create();
+        factory(App\product::class, 10)->create();
+
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
 namespace App;
-
+use App\Product;
 use Illuminate\Database\Eloquent\Model;
 
-class products extends Model
+class product extends Model
 {
     public $timestamps=false;
     
