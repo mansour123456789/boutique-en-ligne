@@ -2,10 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\products;
+
+use App\Product;
 use Faker\Generator as Faker;
 
-$factory->define(products::class, function (Faker $faker) {
+$factory->define(Product::class, function (Faker $faker) {
     return [
         
         'nom_produit'=>$faker->word,
@@ -15,6 +16,5 @@ $factory->define(products::class, function (Faker $faker) {
         'prix' =>$faker->randomFloat(3,0,999999),
         'choix' =>$faker->randomElement(['vetment','chemise','pontalon']),
 
-        'created_at' => now()
     ];
 });

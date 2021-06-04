@@ -17,7 +17,7 @@ class CreateClientsTable extends Migration
             $table->increments('id');
             $table->string('name',50);
             $table->string('prenom',50);
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('password',50);
             $table->string('tel',8);
             $table->enum('Role_user',['0','1']);

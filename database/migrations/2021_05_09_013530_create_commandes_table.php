@@ -19,8 +19,7 @@ class CreateCommandesTable extends Migration
             $table->Integer('prod_id')->unsigned();
             $table->Integer('client_id')->unsigned();
             $table->timestamps();
-            $table->foreign('prod_id')->references('id')->on('products');
-            $table->foreign('client_id')->references('id')->on('clients');
+            
             
             // $table->foreignId('client_id')->constrained('clients');
             // $table->foreignId('prod_id')->constrained('produits');
