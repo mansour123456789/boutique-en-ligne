@@ -7,7 +7,7 @@ use App\clients;
 use App\products;
 use Faker\Generator as Faker;
 
-$factory->define(commande::class, function (Faker $faker) {
+$factory->define(Commande::class, function (Faker $faker) {
     return [
         'Date_commande' => $faker->date,
         'client_id' => clients::get('id')->random(),
