@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //   $this->middleware('auth')->except('welcome');
     }
 
     /**
@@ -25,4 +26,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function welcome()
+    {
+        $categories = Category::get('name');
+        $products = Product::inRandomOrder()->limit(6)->get();
+        return view('welcome',[
+            'categories'=>$categories,
+            'products'=>$products
+        ]);
+    }
+
+
 }
