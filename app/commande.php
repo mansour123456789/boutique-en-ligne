@@ -1,18 +1,17 @@
 <?php
 
 namespace App;
-
+use App\commande;
 use Illuminate\Database\Eloquent\Model;
 
-class commande extends Model
+class product extends Model
 {
     public $timestamps=false;
- public function client()
-   {
-        return $this->belongsTo('APP\client');
-    }
-    public function product()
+    
+  public function commande()
     {
-        return $this->belongsToMany('APP\product');
+        return $this->belongsToMany('APP\commande');
     }
+
 }
+

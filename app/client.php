@@ -1,14 +1,17 @@
 <?php
 
 namespace App;
+use App\clients;
+
 
 use Illuminate\Database\Eloquent\Model;
 
-class client extends Model
+class commande extends Model
 {
     public $timestamps=false;
-    public function commande()
-    {
-        return $this->hasMany('APP\commande');
+ public function client()
+   {
+        return $this->belongsTo('APP\client');
     }
+
 }
