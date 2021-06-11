@@ -3,15 +3,15 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\commande;
-use App\clients;
-use App\products;
+use App\client;
+use App\product;
 use Faker\Generator as Faker;
 
 $factory->define(commande::class, function (Faker $faker) {
     return [
         'Date_commande' => $faker->date,
-        'client_id' => clients::get('id')->random(),
-        'prod_id' => products::get('id')->random(),
+        'client_id' => client::get('id')->random(),
+        'prod_id' => product::get('id')->random(),
         'created_at' => now()
     ];
 });
