@@ -2,8 +2,14 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+<<<<<<< Updated upstream
 
 use App\product;
+=======
+use App\Product;
+use App\Commande;
+use App\Client;
+>>>>>>> Stashed changes
 use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {

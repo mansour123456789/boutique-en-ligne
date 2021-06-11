@@ -12,7 +12,11 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         //
+<<<<<<< Updated upstream:database/seeds/ProductsTableSeeder.php
         factory(App\product::class, 10)->create();
 
+=======
+        factory(Product::class, 10)->create();
+>>>>>>> Stashed changes:database/seeds/ProductTableSeeder.php
     }
 }

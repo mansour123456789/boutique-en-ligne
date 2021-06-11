@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< Updated upstream
 
 
         $this->call(ClientsTableSeeder::class);
@@ -19,6 +20,9 @@ class DatabaseSeeder extends Seeder
 
 
 
+=======
+        $this->call(ProductsTableSeeder::class);
+>>>>>>> Stashed changes
       }
 
 }
